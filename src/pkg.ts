@@ -45,7 +45,7 @@ export function installDependencies(
 }
 
 function updateScript(pkg: PackageJson, name: string, script: string) {
-  if (pkg.scripts?.[name] === undefined) {
+  if (pkg.scripts?.[name] !== undefined) {
     console.log(
       chalk`{yellow ⚠️ {bold ${name}} script already set in package.json, please append {bold \`${script}\`} manually.}`,
     )
