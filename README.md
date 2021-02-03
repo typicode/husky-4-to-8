@@ -2,7 +2,7 @@
 
 > Easily migrate your husky 4 config to husky 5
 
-While it should cover most basic installs, it's __recommended__ to have a look at husky 5 [documentation](https://typicode.github.io/husky)
+While it should cover most basic migrations, it's __recommended__ to have a look at husky 5 [documentation](https://typicode.github.io/husky).
 
 ## Usage
 
