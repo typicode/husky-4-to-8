@@ -29,6 +29,10 @@ export function installDependencies(
       args = ['add', '--dev']
       break
     }
+    case 'pnpm': {
+      args = ['install', '--save-dev']
+      break
+    }
   }
 
   // Add husky as a dependency

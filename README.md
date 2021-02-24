@@ -20,6 +20,13 @@ npm exec -- github:typicode/husky-4-to-5 --package-manager yarn
 
 _Requires `npm 7`_
 
+If you're using using `pnpm` in your project:
+
+```sh
+# Use npm exec, since pnpm doesn't yet support exec
+npm exec -- github:typicode/husky-4-to-5 --package-manager pnpm
+```
+
 ## What it does
 
 1. Installs [husky](https://github.com/typicode/husky) 5
