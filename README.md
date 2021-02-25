@@ -9,20 +9,20 @@ While it should cover most basic migrations, it's __recommended__ to have a look
 If you're using using `npm` in your project:
 
 ```sh
-npm exec -- github:typicode/husky-4-to-5 --package-manager npm
+npx -- github:typicode/husky-4-to-5 --package-manager npm
 ```
 
 If you're using using `yarn` in your project:
 
 ```sh
-npm exec -- github:typicode/husky-4-to-5 --package-manager yarn
+npx -- github:typicode/husky-4-to-5 --package-manager yarn
 ```
 
 If you're using using `pnpm` in your project:
 
 ```sh
-# Use npm exec, since pnpm doesn't yet support exec
-npm exec -- github:typicode/husky-4-to-5 --package-manager pnpm
+# Use npx, since pnpm doesn't yet support exec
+npx -- github:typicode/husky-4-to-5 --package-manager pnpm
 ```
 
 _Requires `npm 7`_
