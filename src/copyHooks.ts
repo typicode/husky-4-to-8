@@ -1,8 +1,8 @@
+import fs from 'fs'
 import chalk from 'chalk'
 import { cosmiconfigSync } from 'cosmiconfig'
 // @ts-ignore
 import { add } from 'husky/lib/commands/add'
-import { info } from './log'
 
 function searchResult(): {
   hooks: { [key: string]: string }
@@ -69,7 +69,8 @@ export function copyHooks(): void {
 
   Object.entries(hooks).forEach(([name, script]) => {
     const file = `.husky/${name}`
-    info(`$ husky add ${file} '${script}'`)
+    fs.unlinkSync(file)
+    console.log(`{bold $ husky add ${file} '${script}'}`)
     add(file, script)
     console.log()
   })
