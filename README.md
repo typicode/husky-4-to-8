@@ -24,6 +24,8 @@ yarn add husky@5 \
 
 ## What it does
 
+`husky init` will modify `package.json > scripts`. You may want to commit your changes to this file before running `husky init`.
+
 `husky-4-to-5` will run `husky add` for each hook defined in `.huskyrc*` or `package.json > husky`. It won't remove previous config however.
 
 ## Clean
