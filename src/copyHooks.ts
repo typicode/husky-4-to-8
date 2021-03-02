@@ -69,8 +69,10 @@ export function copyHooks(): void {
 
   Object.entries(hooks).forEach(([name, script]) => {
     const file = `.husky/${name}`
-    fs.unlinkSync(file)
-    console.log(`{bold $ husky add ${file} '${script}'}`)
+    try {
+      fs.unlinkSync(file)
+    } catch {}
+    console.log(chalk`{bold $ husky add ${file} '${script}'}`)
     add(file, script)
     console.log()
   })

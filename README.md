@@ -9,13 +9,17 @@ While it should cover most basic migrations, it's **recommended** to have a look
 ### npm
 
 ```shell
-npm install husky@5 && npx --no-install husky init && npx github:typicode/husky-4-to-5 -
+npm install husky@5 \
+  && npx --no-install husky init \
+  && npm exec -- github:typicode/husky-4-to-5
 ```
 
 ### yarn
 
 ```shell
-yarn add husky@5 && yarn husky init && npx github:typicode/husky-4-to-5
+yarn add husky@5 \
+  && yarn husky init \
+  && npm exec -- github:typicode/husky-4-to-5
 ```
 
 ## What it does
