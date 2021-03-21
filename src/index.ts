@@ -1,8 +1,8 @@
-import fs from 'fs'
 import chalk from 'chalk'
 import { cosmiconfigSync } from 'cosmiconfig'
+import fs from 'fs'
 // @ts-ignore
-import { add } from 'husky/lib/commands/add'
+import { set } from 'husky/lib/commands/set_add'
 
 function searchResult(): {
   hooks: { [key: string]: string }
@@ -45,11 +45,12 @@ function showManualUpdateMessage(hooks: { [key: string]: string }) {
 
   // Show manual update message
   if (names.length > 0) {
-    console.log(chalk`{yellow ⚠️ {bold ${names.join(', ')}} hook${
+    console.log(chalk`
+{red ⚠️ {bold ${names.join(', ')}} hook${
       names.length > 1 ? 's' : ''
-    } may need to be manually updated to be run via package manager.
+    } may need to be manually updated to be run via package manager.}
 
-Examples:
+{bold Examples:}
   jest → npx --no-install jest
        → yarn jest
 
@@ -60,22 +61,32 @@ Examples:
                                  → yarn commitlint --edit $1
 
 See {underline https://typicode.github.io/husky/#/?id=migrate-from-v4-to-v5}
-}`)
+`)
   }
 }
 
-export function copyHooks(): void {
-  const { hooks } = searchResult()
+export function run(removeV4Config: boolean): void {
+  const { hooks, filepath } = searchResult()
 
   Object.entries(hooks).forEach(([name, script]) => {
     const file = `.husky/${name}`
-    try {
-      fs.unlinkSync(file)
-    } catch {}
-    console.log(chalk`{bold $ husky add ${file} '${script}'}`)
-    add(file, script)
-    console.log()
+    set(file, script)
   })
+
+  if (removeV4Config && filepath) {
+    if (filepath.endsWith('package.json')) {
+      const str = fs.readFileSync('package.json', 'utf-8')
+      const regex = /^[ ]+|\t+/m
+      const indent = regex.exec(str)?.[0]
+      const pkg = JSON.parse(str) // eslint-disable-line
+      delete pkg.husky // eslint-disable-line
+      fs.writeFileSync('package.json', `${JSON.stringify(pkg, null, indent)}\n`)
+      console.log('husky - deleted husky field from package.json')
+    } else {
+      fs.unlinkSync(filepath)
+      console.log(`husky - removed ${filepath}`)
+    }
+  }
 
   showManualUpdateMessage(hooks)
 }

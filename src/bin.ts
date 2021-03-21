@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import { copyHooks } from './copyHooks'
+import { run } from './'
 
-copyHooks()
+const [, , arg] = process.argv
+
+run(arg === '--remove-v4-config')
