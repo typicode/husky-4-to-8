@@ -12,15 +12,25 @@ If your `package.json` is not at the same level as `.git`, please update manuall
 
 ```shell
 npm install husky@6 --save-dev \
-  && npx --no-install husky init \
+  && npx husky-init \
   && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
 
 ### yarn
 
+Yarn 1
+
+```shell
+npm install husky@6 --save-dev \
+  && npx husky-init \
+  && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
+```
+
+Yarn 2
+
 ```shell
 yarn add husky@6 --dev \
-  && yarn husky init \
+  && yarn dlx husky-init --yarn2 \
   && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
 
