@@ -1,8 +1,7 @@
 import chalk from 'chalk'
 import { cosmiconfigSync } from 'cosmiconfig'
 import fs from 'fs'
-// @ts-ignore
-import { set } from 'husky/lib/commands/set_add'
+import { set } from 'husky'
 
 function searchResult(): {
   hooks: { [key: string]: string }

@@ -1,8 +1,8 @@
 # husky-4-to-6
 
-> Easily migrate your husky 4 config to husky 5
+> Easily migrate your husky 4 config to husky 6
 
-While it should cover most basic migrations, it's **recommended** to have a look at husky 5 [documentation](https://typicode.github.io/husky).
+While it should cover most basic migrations, it's **recommended** to have a look at husky 6 [documentation](https://typicode.github.io/husky).
 
 If your `package.json` is not at the same level as `.git`, please update manually.
 
@@ -11,7 +11,7 @@ If your `package.json` is not at the same level as `.git`, please update manuall
 ### npm
 
 ```shell
-npm install husky@5 --save-dev \
+npm install husky@6 --save-dev \
   && npx --no-install husky init \
   && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
@@ -19,7 +19,7 @@ npm install husky@5 --save-dev \
 ### yarn
 
 ```shell
-yarn add husky@5 --dev \
+yarn add husky@6 --dev \
   && yarn husky init \
   && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
