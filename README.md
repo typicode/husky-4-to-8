@@ -1,4 +1,4 @@
-# husky-4-to-5
+# husky-4-to-6
 
 > Easily migrate your husky 4 config to husky 5
 
@@ -13,7 +13,7 @@ If your `package.json` is not at the same level as `.git`, please update manuall
 ```shell
 npm install husky@5 --save-dev \
   && npx --no-install husky init \
-  && npm exec -- github:typicode/husky-4-to-5 --remove-v4-config
+  && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
 
 ### yarn
@@ -21,14 +21,14 @@ npm install husky@5 --save-dev \
 ```shell
 yarn add husky@5 --dev \
   && yarn husky init \
-  && npm exec -- github:typicode/husky-4-to-5 --remove-v4-config
+  && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
 
 ## What each command does
 
 `husky init` sets up Git hooks and updates your `package.json` scripts (you may want to commit your changes to `package.json` before running `husky init`).
 
-`husky-4-to-5` creates hooks based on your husky v4 config. If `--remove-v4-config` is passed, previous config will be deleted (recommended).
+`husky-4-to-6` creates hooks based on your husky v4 config. If `--remove-v4-config` is passed, previous config will be deleted (recommended).
 
 ## Revert
 

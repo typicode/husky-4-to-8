@@ -1,5 +1,5 @@
 {
-  "name": "husky-4-to-5",
+  "name": "husky-4-to-6",
   "version": "1.0.0",
   "description": "> Easily migrate your husky 4 config to husky 5",
   "bin": "lib/bin.js",
@@ -30,13 +30,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/typicode/husky-4-to-5.git"
+    "url": "git+https://github.com/typicode/husky-4-to-6.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/typicode/husky-4-to-5/issues"
+    "url": "https://github.com/typicode/husky-4-to-6/issues"
   },
-  "homepage": "https://github.com/typicode/husky-4-to-5#readme"
+  "homepage": "https://github.com/typicode/husky-4-to-6#readme"
 }
