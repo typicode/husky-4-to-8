@@ -1,7 +1,7 @@
 {
   "name": "husky-4-to-6",
   "version": "1.0.0",
-  "description": "> Easily migrate your husky 4 config to husky 5",
+  "description": "> Easily migrate your husky 4 config to husky 6",
   "bin": "lib/bin.js",
   "files": [
     "/lib"
