@@ -21,7 +21,7 @@ npm install husky@6 --save-dev \
 Yarn 1
 
 ```shell
-npm install husky@6 --save-dev \
+yarn add husky@6 --dev \
   && npx husky-init \
   && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
