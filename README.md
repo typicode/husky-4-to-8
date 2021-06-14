@@ -11,9 +11,9 @@ If your `package.json` is not at the same level as `.git`, please update manuall
 ### npm
 
 ```shell
-npm install husky@6 --save-dev \
-  && npx husky-init \
-  && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
+npm install husky@6 --save-dev
+npx husky-init
+npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
 
 ### yarn
@@ -21,17 +21,17 @@ npm install husky@6 --save-dev \
 Yarn 1
 
 ```shell
-yarn add husky@6 --dev \
-  && npx husky-init \
-  && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
+yarn add husky@6 --dev
+npx husky-init
+npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
 
 Yarn 2
 
 ```shell
-yarn add husky@6 --dev \
-  && yarn dlx husky-init --yarn2 \
-  && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
+yarn add husky@6
+yarn dlx husky-init --yarn2
+npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
 
 ## What each command does
