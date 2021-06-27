@@ -34,6 +34,14 @@ yarn add husky@6 --dev \
   && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
 
+### pnpm
+
+```shell
+pnpm install husky@6 --save-dev \
+  && pnpx husky-init \
+  && pnpx -- github:typicode/husky-4-to-6 --remove-v4-config
+```
+
 ## What each command does
 
 `husky init` sets up Git hooks and updates your `package.json` scripts (you may want to commit your changes to `package.json` before running `husky init`).
