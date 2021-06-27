@@ -36,12 +36,10 @@ yarn add husky@6 --dev \
 
 ### pnpm
 
-`pnpm exec` doesn't support executing code from github, but you can use `npm exec` to do so:
-
 ```shell
 pnpm install husky@6 --save-dev \
   && pnpx husky-init \
-  && npm exec -- github:typicode/husky-4-to-6 --remove-v4-config
+  && pnpx -- github:typicode/husky-4-to-6 --remove-v4-config
 ```
 
 ## What each command does
