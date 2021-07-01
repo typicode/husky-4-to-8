@@ -1,7 +1,7 @@
 {
-  "name": "husky-4-to-6",
+  "private": true,
+  "name": "husky-4-to-7",
   "version": "1.0.0",
-  "description": "> Easily migrate your husky 4 config to husky 6",
   "bin": "lib/bin.js",
   "files": [
     "/lib"
@@ -9,14 +9,11 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "cosmiconfig": "^7.0.0",
-    "husky": "^6",
-    "write-json-file": "^4.3.0",
-    "yargs": "^16.2.0"
+    "husky": "^7"
   },
   "devDependencies": {
     "@tsconfig/node12": "^1.0.7",
     "@types/node": "^14.14.22",
-    "@types/yargs": "^16.0.0",
     "@typicode/eslint-config": "^0.1.2",
     "del-cli": "^3.0.1",
     "type-fest": "^0.21.2",
@@ -28,15 +25,7 @@
     "prepare": "husky install",
     "lint": "eslint src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/typicode/husky-4-to-6.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/typicode/husky-4-to-6/issues"
-  },
-  "homepage": "https://github.com/typicode/husky-4-to-6#readme"
+  "repository": "typicode/husky-4-to-7.git",
+  "author": "Typicode <typicode@gmail.com>",
+  "license": "MIT"
 }
