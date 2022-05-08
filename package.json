@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "husky-4-to-7",
+  "name": "husky-4-to-8",
   "version": "1.0.0",
   "bin": "lib/bin.js",
   "files": [
@@ -9,7 +9,7 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "cosmiconfig": "^7.0.0",
-    "husky": "^7"
+    "husky": "^8"
   },
   "devDependencies": {
     "@tsconfig/node12": "^1.0.7",
@@ -25,7 +25,7 @@
     "prepare": "husky install",
     "lint": "eslint src"
   },
-  "repository": "typicode/husky-4-to-7.git",
+  "repository": "typicode/husky-4-to-8.git",
   "author": "Typicode <typicode@gmail.com>",
   "license": "MIT"
 }

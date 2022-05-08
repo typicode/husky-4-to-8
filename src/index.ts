@@ -59,7 +59,7 @@ function showManualUpdateMessage(hooks: { [key: string]: string }) {
   commitlint -E HUSKY_GIT_PARAMS → npx --no-install commitlint --edit $1
                                  → yarn commitlint --edit $1
 
-See {underline https://typicode.github.io/husky/#/?id=migrate-from-v4-to-v7}
+See {underline https://typicode.github.io/husky/#/?id=migrate-from-v4-to-v8}
 `)
   }
 }
