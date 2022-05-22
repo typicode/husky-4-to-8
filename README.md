@@ -8,7 +8,15 @@ If your `package.json` is not at the same level as `.git`, please update manuall
 
 ## Usage
 
-### npm
+### npm 6
+
+```shell
+npm install husky@6 --save-dev \
+  && npx husky-init \
+  && npx github:typicode/husky-4-to-6 --remove-v4-config
+```
+
+### npm 7
 
 ```shell
 npm install husky@latest --save-dev \
