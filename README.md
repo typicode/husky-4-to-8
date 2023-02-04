@@ -36,10 +36,20 @@ yarn add husky@latest --dev \
 
 ### pnpm
 
+Pnpm < 7
+
 ```shell
 pnpm install husky@8 --save-dev \
   && pnpx husky-init \
   && pnpx -- github:typicode/husky-4-to-8 --remove-v4-config
+```
+
+Pnpm 7+
+
+```shell
+pnpm install husky@8 --save-dev \
+  && pnpx husky-init \
+  && pnpm dlx github:typicode/husky-4-to-8 --remove-v4-config
 ```
 
 ## What each command does
